@@ -609,12 +609,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav menu__list">
 								<li class="active">
-									<a class="nav-stylehead" href="index.html">Home
+									<a class="nav-stylehead" href="{{route('app.index')}}">Home
 										<span class="sr-only">(current)</span>
 									</a>
 								</li>
 								<li class="">
-									<a class="nav-stylehead" href="about.html">About Us</a>
+									<a class="nav-stylehead" href="{{route('app.about')}}">About Us</a>
 								</li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kitchen
@@ -625,50 +625,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="col-sm-4 multi-gd-img">
 												<ul class="multi-column-dropdown">
 													<li>
-														<a href="product.html">Bakery</a>
+														<a href="{{route('app.kitchen')}}">Bakery</a>
 													</li>
 													<li>
-														<a href="product.html">Baking Supplies</a>
+														<a href="{{route('app.kitchen')}}">Baking Supplies</a>
 													</li>
 													<li>
-														<a href="product.html">Coffee, Tea & Beverages</a>
+														<a href="{{route('app.kitchen')}}">Coffee, Tea & Beverages</a>
 													</li>
 													<li>
-														<a href="product.html">Dried Fruits, Nuts</a>
+														<a href="{{route('app.kitchen')}}">Dried Fruits, Nuts</a>
 													</li>
 													<li>
-														<a href="product.html">Sweets, Chocolate</a>
+														<a href="{{route('app.kitchen')}}">Sweets, Chocolate</a>
 													</li>
 													<li>
-														<a href="product.html">Spices & Masalas</a>
+														<a href="{{route('app.kitchen')}}">Spices & Masalas</a>
 													</li>
 													<li>
-														<a href="product.html">Jams, Honey & Spreads</a>
+														<a href="{{route('app.kitchen')}}">Jams, Honey & Spreads</a>
 													</li>
 												</ul>
 											</div>
 											<div class="col-sm-4 multi-gd-img">
 												<ul class="multi-column-dropdown">
 													<li>
-														<a href="product.html">Pickles</a>
+														<a href="{{route('app.kitchen')}}">Pickles</a>
 													</li>
 													<li>
-														<a href="product.html">Pasta & Noodles</a>
+														<a href="{{route('app.kitchen')}}">Pasta & Noodles</a>
 													</li>
 													<li>
-														<a href="product.html">Rice, Flour & Pulses</a>
+														<a href="{{route('app.kitchen')}}">Rice, Flour & Pulses</a>
 													</li>
 													<li>
-														<a href="product.html">Sauces & Cooking Pastes</a>
+														<a href="{{route('app.kitchen')}}">Sauces & Cooking Pastes</a>
 													</li>
 													<li>
-														<a href="product.html">Snack Foods</a>
+														<a href="{{route('app.kitchen')}}">Snack Foods</a>
 													</li>
 													<li>
-														<a href="product.html">Oils, Vinegars</a>
+														<a href="{{route('app.kitchen')}}">Oils, Vinegars</a>
 													</li>
 													<li>
-														<a href="product.html">Meat, Poultry & Seafood</a>
+														<a href="{{route('app.kitchen')}}">Meat, Poultry & Seafood</a>
 													</li>
 												</ul>
 											</div>
@@ -688,50 +688,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="col-sm-6 multi-gd-img">
 												<ul class="multi-column-dropdown">
 													<li>
-														<a href="product2.html">Kitchen & Dining</a>
+														<a href="{{route('app.household')}}">Kitchen & Dining</a>
 													</li>
 													<li>
-														<a href="product2.html">Detergents</a>
+														<a href="{{route('app.household')}}">Detergents</a>
 													</li>
 													<li>
-														<a href="product2.html">Utensil Cleaners</a>
+														<a href="{{route('app.household')}}">Utensil Cleaners</a>
 													</li>
 													<li>
-														<a href="product2.html">Floor & Other Cleaners</a>
+														<a href="{{route('app.household')}}">Floor & Other Cleaners</a>
 													</li>
 													<li>
-														<a href="product2.html">Disposables, Garbage Bag</a>
+														<a href="{{route('app.household')}}">Disposables, Garbage Bag</a>
 													</li>
 													<li>
-														<a href="product2.html">Repellents & Fresheners</a>
+														<a href="{{route('app.household')}}">Repellents & Fresheners</a>
 													</li>
 													<li>
-														<a href="product2.html"> Dishwash</a>
+														<a href="{{route('app.household')}}"> Dishwash</a>
 													</li>
 												</ul>
 											</div>
 											<div class="col-sm-6 multi-gd-img">
 												<ul class="multi-column-dropdown">
 													<li>
-														<a href="product2.html">Pet Care</a>
+														<a href="{{route('app.household')}}">Pet Care</a>
 													</li>
 													<li>
-														<a href="product2.html">Cleaning Accessories</a>
+														<a href="{{route('app.household')}}">Cleaning Accessories</a>
 													</li>
 													<li>
-														<a href="product2.html">Pooja Needs</a>
+														<a href="{{route('app.household')}}">Pooja Needs</a>
 													</li>
 													<li>
-														<a href="product2.html">Crackers</a>
+														<a href="{{route('app.household')}}">Crackers</a>
 													</li>
 													<li>
-														<a href="product2.html">Festive Decoratives</a>
+														<a href="{{route('app.household')}}">Festive Decoratives</a>
 													</li>
 													<li>
-														<a href="product2.html">Plasticware</a>
+														<a href="{{route('app.household')}}">Plasticware</a>
 													</li>
 													<li>
-														<a href="product2.html">Home Care</a>
+														<a href="{{route('app.household')}}">Home Care</a>
 													</li>
 												</ul>
 											</div>
@@ -740,7 +740,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</ul>
 								</li>
 								<li class="">
-									<a class="nav-stylehead" href="faqs.html">Faqs</a>
+									<a class="nav-stylehead" href="{{route('app.faqs')}}">Faqs</a>
 								</li>
 								<li class="dropdown">
 									<a class="nav-stylehead dropdown-toggle" href="#" data-toggle="dropdown">Pages
@@ -748,15 +748,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</a>
 									<ul class="dropdown-menu agile_short_dropdown">
 										<li>
-											<a href="icons.html">Web Icons</a>
+											<a href="{{route('app.icons')}}">Web Icons</a>
 										</li>
 										<li>
-											<a href="typography.html">Typography</a>
+											<a href="{{route('app.typography')}}">Typography</a>
 										</li>
 									</ul>
 								</li>
 								<li class="">
-									<a class="nav-stylehead" href="contact.html">Contact</a>
+									<a class="nav-stylehead" href="{{route('app.contact')}}">Contact</a>
 								</li>
 							</ul>
 						</div>
