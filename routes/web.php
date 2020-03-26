@@ -26,3 +26,9 @@ Route::namespace('Frontend')->group(function(){
     Route::get('/typography','ListingController@typography')->name('app.typography');
     Route::get('/contact','ListingController@contact')->name('app.contact');
 });
+Route::prefix('layout')->group(function(){
+  Route::post('/register','AuthController@register')->middleware('guest')->name('register');
+  Route::post('/login','AuthController@login')->middleware('guest')->name('login');
+  Route::post('/logout','AuthController@logout')->name('logout');
+    
+});

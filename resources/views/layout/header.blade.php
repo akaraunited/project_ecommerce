@@ -70,14 +70,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
 						<span class="fa fa-phone" aria-hidden="true"></span> 001 234 5678
 					</li>
+
+					@guest
+							<li>
+								<a href="#" data-toggle="modal" data-target="#myModal1">
+									<span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
+							</li>
+							<li>
+								<a href="#" data-toggle="modal" data-target="#myModal2">
+									<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
+							</li>
+					@else
 					<li>
 						<a href="#" data-toggle="modal" data-target="#myModal1">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
+							<span class="fa fa-user" aria-hidden="true"></span> {{ Str::substr(Auth::user()->name, 0 ,10) }}  </a>
 					</li>
 					<li>
-						<a href="#" data-toggle="modal" data-target="#myModal2">
-							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
+						<a href="{{ route('logout') }}"
+						onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+							<span class="fa fa-sign-out" aria-hidden="true">Logout</span>
+							
+						</a>
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+								@csrf
+							</form>
 					</li>
+				@endguest
+
 				</ul>
 				<!-- //header lists -->
 				<!-- search -->
@@ -507,12 +527,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a href="#" data-toggle="modal" data-target="#myModal2">
 								Sign Up Now</a>
 						</p>
-						<form action="#" method="post">
+					<form action="{{route('login')}}" method="POST">
+						@csrf
 							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="User Name" name="Name" required="">
+								<input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+        
+								@error('email')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $message }}</strong>
+									</span>
+								@enderror
 							</div>
 							<div class="styled-input">
-								<input type="password" placeholder="Password" name="password" required="">
+								<input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+        
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
 							</div>
 							<input type="submit" value="Sign In">
 						</form>
@@ -544,20 +577,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p>
 							Come join the Grocery Shoppy! Let's set up your Account.
 						</p>
-						<form action="#" method="post">
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="Name" name="Name" required="">
-							</div>
-							<div class="styled-input">
-								<input type="email" placeholder="E-mail" name="Email" required="">
-							</div>
-							<div class="styled-input">
-								<input type="password" placeholder="Password" name="password" id="password1" required="">
-							</div>
-							<div class="styled-input">
-								<input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required="">
-							</div>
-							<input type="submit" value="Sign Up">
+					<form action="{{route('register')}}" method="POST">
+							@csrf
+								<div class="styled-input agile-styled-input-top">
+									<input id="name" type="text" placeholder="Name" required="" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+									@error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                	@enderror
+								</div>
+								<div class="styled-input">
+									<input id="email" type="email" placeholder="E-mail"  required="" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+									@error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+								</div>
+								<div class="styled-input">
+									<input id="password" type="password" placeholder="Password" name="password" id="password1" required="" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+									
+									@error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                   @enderror
+								</div>
+								<div class="styled-input">
+									<input type="password" placeholder="Confirm Password" id="password-confirm" name="password_confirmation"  required autocomplete="new-password">
+								</div>
+								<input type="submit" value="Sign Up">
 						</form>
 						<p>
 							<a href="#">By clicking register, I agree to your terms</a>
