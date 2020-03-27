@@ -23,7 +23,7 @@ class ImageTableSeeder extends Seeder
                 'location'        => '/test/2.jpg',
             ],
             [
-                'product_id' => Product::findOrFail(2)->id,
+                'product_id' => Product::findOrFail(1)->id,
                 'location'        => '/test/3.jpg',
             ],
          ];
