@@ -18,13 +18,13 @@ class CategoriesTableSeeder extends Seeder
 // Category
         $Catetories=[
             [
-                'name'   =>'Hotels'
+                'name'   =>'Nuts'
             ],
             [
-                'name'   => 'Resturant',
+                'name'   => 'Oils',
             ],
             [
-                'name'   => 'Events',
+                'name'   => 'Noodles',
             ]
             ];
             // $user =User::create([

@@ -2,14 +2,39 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\Product;
 use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
     public function index(){
-        return view('public.index');
+        
+      
+        $product=Product::select('*')->get();
+        
+       $Nuts =Product::select('*')
+           ->where('category_id',1)
+           ->get()
+       ;
+       $Oils =Product::select('*')
+            ->where('category_id',2)
+            ->get();
+       ;
+ 
+
+        return view('public.index',['Nuts'=>$Nuts],['Oils'=>$Oils]);
     }
+    public function product(){
+        return view('public.product');
+    }
+
+
+
+
+
+
     public function about(){
         return view('public.about');
     }

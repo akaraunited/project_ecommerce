@@ -18,8 +18,33 @@ class ProductTableSeeder extends Seeder
 
     Product::create([
         'category_id' => Category::findOrFail(1)->id,
+        'featured_image' => '/test/m1.jpg',
         'name'        => 'teasting',
-        'price'        => 'justing',
+        'price'        => '250$',
+        'description'   => 'description',
+     ]);
+     Product::create([
+        'category_id' => Category::findOrFail(1)->id,
+        'featured_image' => '/test/m2.jpg',
+        'name'        => 'Justing 2',
+        'price'        => '300$',
+        'description'   => 'description',
+     ]);
+
+     Product::create([
+        'category_id' => Category::findOrFail(2)->id,
+        'featured_image' => '/test/mk4.jpg',
+        'name'        => 'Testing Oils',
+        'price'        => '250$',
+        'description'   => 'description',
+     ]);
+
+
+     Product::create([
+        'category_id' => Category::findOrFail(3)->id,
+        'featured_image' => '/test/mk7.jpg',
+        'name'        => 'Testing Pastas',
+        'price'        => '250$',
         'description'   => 'description',
      ]);
 

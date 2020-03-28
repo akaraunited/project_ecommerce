@@ -341,11 +341,11 @@
 
 	<!-- js-files -->
 	<!-- jquery -->
-	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
 	<!-- //jquery -->
 
 	<!-- popup modal (for signin & signup)-->
-	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
 	<script>
 		$(document).ready(function () {
 			$('.popup-with-zoom-anim').magnificPopup({
@@ -368,8 +368,9 @@
 	</script> -->
 	<!-- //popup modal (for signin & signup)-->
 
+
 	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
+	<script src="{{asset('js/minicart.js')}}"></script>
 	<script>
 		paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
 
@@ -393,7 +394,7 @@
 	<!-- //cart-js -->
 
 	<!-- price range (top products) -->
-	<script src="js/jquery-ui.js"></script>
+	<script src="{{asset('js/jquery-ui.js')}}"></script>
 	<script>
 		//<![CDATA[ 
 		$(window).load(function () {
@@ -413,7 +414,7 @@
 	<!-- //price range (top products) -->
 
 	<!-- flexisel (for special offers) -->
-	<script src="js/jquery.flexisel.js"></script>
+	<script src="{{asset('js/jquery.flexisel.js')}}"></script>
 	<script>
 		$(window).load(function () {
 			$("#flexiselDemo1").flexisel({
@@ -463,12 +464,12 @@
 	<!-- //password-script -->
 
 	<!-- smoothscroll -->
-	<script src="js/SmoothScroll.min.js"></script>
+	<script src="{{asset('js/SmoothScroll.min.js')}}"></script>
 	<!-- //smoothscroll -->
 
 	<!-- start-smooth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
+	<script src="{{asset('js/move-top.js')}}"></script>
+	<script src="{{asset('js/easing.js')}}"></script>
 	<script>
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -502,7 +503,7 @@
 	<!-- //smooth-scrolling-of-move-up -->
 
 	<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+	<script src="{{asset('js/bootstrap.js')}}"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
 

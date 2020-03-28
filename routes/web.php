@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::namespace('Frontend')->group(function(){
     Route::get('/','ListingController@index')->name('app.index');
+    Route::get('/product','ListingController@product')->name('app.product');
     Route::get('/about','ListingController@about')->name('app.about');
     Route::get('/kitchen','ListingController@kitchen')->name('app.kitchen');
     Route::get('/household','ListingController@household')->name('app.household');
@@ -26,6 +27,7 @@ Route::namespace('Frontend')->group(function(){
     Route::get('/typography','ListingController@typography')->name('app.typography');
     Route::get('/contact','ListingController@contact')->name('app.contact');
 });
+
 Route::prefix('layout')->group(function(){
   Route::post('/register','AuthController@register')->middleware('guest')->name('register');
   Route::post('/login','AuthController@login')->middleware('guest')->name('login');
