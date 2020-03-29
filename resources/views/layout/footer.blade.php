@@ -506,7 +506,7 @@
 	<script src="{{asset('js/bootstrap.js')}}"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
-
+	<script src="{{asset('js/imagezoom.js')}}"></script>
 
 </body>
 
