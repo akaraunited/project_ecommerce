@@ -26,8 +26,11 @@ class ListingController extends Controller
 
         return view('public.index',['Nuts'=>$Nuts],['Oils'=>$Oils]);
     }
-    public function product(){
-        return view('public.product');
+    public function product(Request $request,$id){
+
+        $product = Product::findOrfail($id); 
+
+        return view('public.product',['product'=>$product]);
     }
 
 
@@ -38,6 +41,10 @@ class ListingController extends Controller
     public function about(){
         return view('public.about');
     }
+
+
+
+
     public function kitchen(){
         return view('public.kitchen');
     }

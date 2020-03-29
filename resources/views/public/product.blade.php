@@ -20,6 +20,9 @@
                         </li>
                         <li>Single Page</li>
                     </ul>
+                    {{-- <section>
+                        <strong>User:: {{$product->user ? $product->user->name : null}} </strong><br>
+                    </section> --}}
                 </div>
             </div>
         </div>
@@ -40,17 +43,17 @@
                     <div class="grid images_3_of_2">
                         <div class="flexslider">
                             <ul class="slides">
-                                <li data-thumb="images/si.jpg">
+                                <li data-thumb="{{asset('images/si.jpg')}}">
                                     <div class="thumb-image">
-                                        <img src="images/si.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                                        <img src="{{asset('images/si.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
                                 </li>
-                                <li data-thumb="images/si2.jpg">
+                                <li data-thumb="{{asset('images/si2.jpg)')}}">
                                     <div class="thumb-image">
-                                        <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                                        <img src="{{asset('images/si2.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
                                 </li>
-                                <li data-thumb="images/si3.jpg">
+                                <li data-thumb="{{asset('images/si3.jpg')}}">
                                     <div class="thumb-image">
-                                        <img src="images/si3.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                                        <img src="{{asset('images/si3.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
@@ -58,7 +61,7 @@
                     </div>
                 </div>
                 <div class="col-md-7 single-right-left simpleCart_shelfItem">
-                    <h3>Zeeba Premium Basmati Rice - 5 KG</h3>
+                <h3>{{$product['name']}}</h3>
                     <div class="rating1">
                         <span class="starRating">
                             <input id="rating5" type="radio" name="rating" value="5">
@@ -74,7 +77,7 @@
                         </span>
                     </div>
                     <p>
-                        <span class="item_price">$950.00</span>
+                        <span class="item_price">{{$product['price']}}</span>
                         <del>$1300.00</del>
                         <label>Free delivery</label>
                     </p>

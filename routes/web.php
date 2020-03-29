@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::namespace('Frontend')->group(function(){
     Route::get('/','ListingController@index')->name('app.index');
-    Route::get('/product','ListingController@product')->name('app.product');
+    Route::get('/product/{id}','ListingController@product')->name('app.product');
     Route::get('/about','ListingController@about')->name('app.about');
     Route::get('/kitchen','ListingController@kitchen')->name('app.kitchen');
     Route::get('/household','ListingController@household')->name('app.household');

@@ -258,7 +258,7 @@
 								<img src="{{$Nut->featured_image}}" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-										<a href="{{route('app.product')}}" class="link-product-add-cart">Quick View</a>
+										<a href="{{route('app.product',['id'=>$Nut['id']])}}" class="link-product-add-cart">Quick View</a>
 										</div>
 									</div>
 									<span class="product-new-top">New</span>
@@ -322,7 +322,7 @@
 									<img src="{{$Oil->featured_image}}" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
+											<a href="{{route('app.product',['id'=>$Oil['id']])}}" class="link-product-add-cart">Quick View</a>
 										</div>
 									</div>
 									<span class="product-new-top">New</span>
