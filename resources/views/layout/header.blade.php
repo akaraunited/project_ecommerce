@@ -27,6 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 	<link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
 	<link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('css/flexslider.css')}}" type="text/css" media="all" />
 	<!--pop-up-box-->
 	<link href="{{asset('css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all" />
 	<!--//pop-up-box-->
@@ -34,6 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link rel="stylesheet" type="text/css" href="{{asset('css/jquery-ui1.css')}}">
 	<!-- fonts -->
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+	<!--image zoom-->
 </head>
 
 <body>

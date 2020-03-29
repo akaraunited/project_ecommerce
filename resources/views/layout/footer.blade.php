@@ -413,6 +413,24 @@
 	</script>
 	<!-- //price range (top products) -->
 
+	<!-- FlexSlider -->
+	<script defer src="{{asset('js/jquery.flexslider.js')}}"></script>
+
+	<script type="text/javascript">
+	  $(function(){
+		SyntaxHighlighter.all();
+	  });
+	  $(window).load(function(){
+		$('.flexslider').flexslider({
+		  animation: "slide",
+		  start: function(slider){
+			$('body').removeClass('loading');
+		  }
+		});
+	  });
+	</script>
+
+
 	<!-- flexisel (for special offers) -->
 	<script src="{{asset('js/jquery.flexisel.js')}}"></script>
 	<script>

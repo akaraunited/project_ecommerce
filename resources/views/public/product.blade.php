@@ -70,6 +70,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- add test new zoom image -->
+
                 <div class="col-md-7 single-right-left simpleCart_shelfItem">
                 <h3>{{$products['name']}}</h3>
                     <div class="rating1">
