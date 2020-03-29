@@ -23,7 +23,7 @@
                     <section>
                         <strong>User:: {{$products->user ? $products->user->name : null}} </strong><br>
                         <strong>name:: {{$products->category ? $products->category->name : null}} </strong><br>
-                        {{-- <strong>Id Image:: {{$products->images ? $products->images->id : null}} </strong><br> --}}
+                        
                     </section>
                 </div>
             </div>
@@ -31,7 +31,9 @@
         <!-- //page -->
         <!-- Single Page -->
        
-
+   {{-- @foreach ($products->images as $image)
+   <img src="{{asset($image->location)}}" >
+   @endforeach --}}
              {{-- @foreach ($products->images as $image)
                     <img src="{{asset($products->images->location)}}" >
              @endforeach --}}
@@ -53,18 +55,20 @@
                     <div class="grid images_3_of_2">
                         <div class="flexslider">
                             <ul class="slides">
-                                <li data-thumb="{{asset('images/si.jpg')}}">
+                              @foreach ($products->images as $image)
+                                <li data-thumb="{{asset($image->location)}}">
                                     <div class="thumb-image">
-                                        <img src="{{asset('images/si.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                                        <img src="{{asset($image->location)}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
                                 </li>
-                                <li data-thumb="{{asset('images/si2.jpg)')}}">
+                                @endforeach
+                                {{-- <li data-thumb="{{asset('images/si2.jpg)')}}">
                                     <div class="thumb-image">
                                         <img src="{{asset('images/si2.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
                                 </li>
                                 <li data-thumb="{{asset('images/si3.jpg')}}">
                                     <div class="thumb-image">
                                         <img src="{{asset('images/si3.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                                </li>
+                                </li> --}}
                             </ul>
                             <div class="clearfix"></div>
                         </div>

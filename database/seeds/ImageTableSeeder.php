@@ -16,15 +16,19 @@ class ImageTableSeeder extends Seeder
         $images=[
             [
                 'product_id' => Product::findOrFail(1)->id,
-                'location'        => '/test/1.jpg',
+                'location'        => '/test/m1.jpg',
             ],
             [
                 'product_id' => Product::findOrFail(1)->id,
-                'location'        => '/test/2.jpg',
+                'location'        => '/test/m2.jpg',
             ],
             [
                 'product_id' => Product::findOrFail(1)->id,
-                'location'        => '/test/3.jpg',
+                'location'        => '/test/m3.jpg',
+            ],
+            [
+                'product_id' => Product::findOrFail(2)->id,
+                'location'        => '/test/m3.jpg',
             ],
          ];
 foreach($images as $image){
@@ -35,3 +39,4 @@ foreach($images as $image){
 }
     }
 }
+
