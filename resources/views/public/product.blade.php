@@ -22,6 +22,8 @@
                     </ul>
                     <section>
                         <strong>User:: {{$products->user ? $products->user->name : null}} </strong><br>
+                        <strong>name:: {{$products->category ? $products->category->name : null}} </strong><br>
+                        {{-- <strong>Id Image:: {{$products->images ? $products->images->id : null}} </strong><br> --}}
                     </section>
                 </div>
             </div>
@@ -29,7 +31,11 @@
         <!-- //page -->
         <!-- Single Page -->
        
-                    {{-- <img src="{{asset($products->images->location)}}" > --}}
+
+             {{-- @foreach ($products->images as $image)
+                    <img src="{{asset($products->images->location)}}" >
+             @endforeach --}}
+                    
       
 
         <div class="banner-bootom-w3-agileits">

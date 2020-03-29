@@ -15,12 +15,12 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id')->index();
-            $table->unsignedBigInteger('category_id')->index();
-            $table->binary('featured_image');
             $table->string('name');
+            $table->binary('featured_image');
             $table->string('price');
             $table->string('description');
+            $table->unsignedBigInteger('user_id')->index();
+            $table->unsignedBigInteger('category_id')->index();
             $table->timestamps();
           
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
