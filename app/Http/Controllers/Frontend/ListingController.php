@@ -30,7 +30,7 @@ class ListingController extends Controller
 
         $product = Product::findOrfail($id); 
 
-        return view('public.product',['product'=>$product]);
+        return view('public.product',['products'=>$product]);
     }
 
 

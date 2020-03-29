@@ -20,14 +20,18 @@
                         </li>
                         <li>Single Page</li>
                     </ul>
-                    {{-- <section>
-                        <strong>User:: {{$product->user ? $product->user->name : null}} </strong><br>
-                    </section> --}}
+                    <section>
+                        <strong>User:: {{$products->user ? $products->user->name : null}} </strong><br>
+                    </section>
                 </div>
             </div>
         </div>
         <!-- //page -->
         <!-- Single Page -->
+       
+                    {{-- <img src="{{asset($products->images->location)}}" > --}}
+      
+
         <div class="banner-bootom-w3-agileits">
             <div class="container">
                 <!-- tittle heading -->
@@ -61,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-md-7 single-right-left simpleCart_shelfItem">
-                <h3>{{$product['name']}}</h3>
+                <h3>{{$products['name']}}</h3>
                     <div class="rating1">
                         <span class="starRating">
                             <input id="rating5" type="radio" name="rating" value="5">
@@ -77,7 +81,7 @@
                         </span>
                     </div>
                     <p>
-                        <span class="item_price">{{$product['price']}}</span>
+                        <span class="item_price">{{$products['price']}}</span>
                         <del>$1300.00</del>
                         <label>Free delivery</label>
                     </p>
