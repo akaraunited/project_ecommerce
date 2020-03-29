@@ -27,11 +27,11 @@ class CategoriesTableSeeder extends Seeder
                 'name'   => 'Noodles',
             ]
             ];
-            // $user =User::create([
-            //     'name'=>'Phov Thea',
-            //     'email'=>'phovthea@gmail.com',
-            //     'password'=>bcrypt('12345678'),
-            //   ]);
+            $user =User::create([
+                'name'=>'Phov Thea',
+                'email'=>'phovthea@gmail.com',
+                'password'=>bcrypt('12345678'),
+              ]);
               
      foreach($Catetories as $category)   {
         $category=Category::create([

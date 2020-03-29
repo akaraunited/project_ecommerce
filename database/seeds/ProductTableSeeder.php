@@ -3,6 +3,7 @@
 use App\Category;
 use App\Image;
 use App\Product;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class ProductTableSeeder extends Seeder
@@ -15,8 +16,9 @@ class ProductTableSeeder extends Seeder
     public function run()
     {
         
-
+      $user = User::first();
     Product::create([
+       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(1)->id,
         'featured_image' => '/test/m1.jpg',
         'name'        => 'teasting',
@@ -24,6 +26,7 @@ class ProductTableSeeder extends Seeder
         'description'   => 'description',
      ]);
      Product::create([
+      'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(1)->id,
         'featured_image' => '/test/m2.jpg',
         'name'        => 'Justing 2',
@@ -32,6 +35,7 @@ class ProductTableSeeder extends Seeder
      ]);
 
      Product::create([
+      'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(2)->id,
         'featured_image' => '/test/mk4.jpg',
         'name'        => 'Testing Oils',
@@ -39,8 +43,9 @@ class ProductTableSeeder extends Seeder
         'description'   => 'description',
      ]);
 
-
+ 
      Product::create([
+      'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(3)->id,
         'featured_image' => '/test/mk7.jpg',
         'name'        => 'Testing Pastas',
