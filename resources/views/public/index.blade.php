@@ -250,6 +250,7 @@
 						<h3 class="heading-tittle">Nuts</h3>
 				
 						@foreach ($Nuts as $Nut)
+						
 					
 			
 						<div class="col-md-4 product-men">
@@ -291,7 +292,7 @@
 								</div>
 							</div>
 						</div>
-
+				
 				@endforeach		
 						<div class="clearfix"></div>
 					</div>
@@ -313,9 +314,13 @@
 					<!-- third section (oils) -->
 					<div class="product-sec1">
 						<h3 class="heading-tittle">Oils</h3>
-						@foreach ($Oils as $Oil)
-							
-						
+
+
+					
+
+						  @foreach ($Oils as $Oil)
+						  
+						  
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
@@ -355,30 +360,31 @@
 								</div>
 							</div>
 						</div>
-
+					
 						@endforeach
-						
+					
 						<div class="clearfix"></div>
 					</div>
 					<!-- //third section (oils) -->
 					<!-- fourth section (noodles) -->
 					<div class="product-sec1">
 						<h3 class="heading-tittle">Pasta & Noodles</h3>
-						
+				@foreach ($Pasta as $Pastas)
+					
 						
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="images/mk7.jpg" alt="">
+									<img src="{{$Pastas->featured_image}}" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single.html" class="link-product-add-cart">Quick View</a>
+											<a href="{{route('app.product',['id'=>$Pastas['id']])}}" class="link-product-add-cart">Quick View</a>
 										</div>
 									</div>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-									<a href="single.html">kdfjjkd</a>
+									<a href="single.html">{{$Pastas->name}}</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">sdfkjdksjf</span>
@@ -404,7 +410,8 @@
 								</div>
 							</div>
 						</div>
-			
+						
+						@endforeach
 						<div class="clearfix"></div>
 					</div>
 					<!-- //fourth section (noodles) -->
@@ -414,6 +421,7 @@
 		</div>
 	</div>
 	<!-- //top products -->
+
 	<!-- special offers -->
 	<div class="featured-section" id="projects">
 		<div class="container">
@@ -428,23 +436,24 @@
 			<!-- //tittle heading -->
 			<div class="content-bottom-in">
 				<ul id="flexiselDemo1">
+					
+					
+					@foreach ($offers as $offer)
+					
 					<li>
-						
-							
-						
 						<div class="w3l-specilamk">
 							<div class="speioffer-agile">
 								<a href="single.html">
-									<img src="images/s1.jpg" alt="">
+									<img src="{{$offer->featured_image}}" alt="">
 								</a>
 							</div>
 							<div class="product-name-w3l">
 								<h4>
-								<a href="single.html">testing</a>
+								<a href="single.html">{{$offer->name}}</a>
 								</h4>
 								<div class="w3l-pricehkj">
-									<h6>$220.00</h6>
-									<p>Save $40.00</p>
+									<h6>$160.00</h6>
+									<p>Save $60.00</p>
 								</div>
 								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 									<form action="#" method="post">
@@ -452,8 +461,8 @@
 											<input type="hidden" name="cmd" value="_cart" />
 											<input type="hidden" name="add" value="1" />
 											<input type="hidden" name="business" value=" " />
-											<input type="hidden" name="item_name" value="Aashirvaad, 5g" />
-											<input type="hidden" name="amount" value="220.00" />
+											<input type="hidden" name="item_name" value="Cadbury Choclairs, 655.5g" />
+											<input type="hidden" name="amount" value="160.00" />
 											<input type="hidden" name="discount_amount" value="1.00" />
 											<input type="hidden" name="currency_code" value="USD" />
 											<input type="hidden" name="return" value=" " />
@@ -465,17 +474,49 @@
 							</div>
 						</div>
 					</li>
-				
-				
+					@endforeach
+					{{-- <li>
+						<div class="w3l-specilamk">
+							<div class="speioffer-agile">
+								<a href="single2.html">
+									<img src="images/s6.jpg" alt="">
+								</a>
+							</div>
+							<div class="product-name-w3l">
+								<h4>
+									<a href="single2.html">Fair & Lovely, 80 g</a>
+								</h4>
+								<div class="w3l-pricehkj">
+									<h6>$121.60</h6>
+									<p>Save $30.00</p>
+								</div>
+								<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+									<form action="#" method="post">
+										<fieldset>
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="business" value=" " />
+											<input type="hidden" name="item_name" value="Fair & Lovely, 80 g" />
+											<input type="hidden" name="amount" value="121.60" />
+											<input type="hidden" name="discount_amount" value="1.00" />
+											<input type="hidden" name="currency_code" value="USD" />
+											<input type="hidden" name="return" value=" " />
+											<input type="hidden" name="cancel_return" value=" " />
+											<input type="submit" name="submit" value="Add to cart" class="button" />
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</li>
+					 --}}
 					
-	
-
-
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- //special offers -->
+
 	<!-- newsletter -->
 	<div class="footer-top">
 		<div class="container-fluid">

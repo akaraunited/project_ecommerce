@@ -12,20 +12,26 @@ class ListingController extends Controller
     public function index(){
         
       
-        $product=Product::select('*')->get();
-        
-       $Nuts =Product::select('*')
-           ->where('category_id',1)
-           ->get()
-       ;
-       $Oils =Product::select('*')
-            ->where('category_id',2)
-            ->get();
-       ;
+        // $product=Product::select('*')->get();
+        $Nuts =Product::select('*')->where('category_id',1)->paginate(3);
+        $Oils =Product::select('*')->where('category_id',2)->paginate(3);
+        $Pasta =Product::select('*')->where('category_id',3)->paginate(3);
+       $offers =Product::select('*')->paginate(8);
+    //    $Oils =Product::select('*')
+    //         ->where('category_id',2)
+    //         ->get();
+    //    ;
+
  
 
-        return view('public.index',['Nuts'=>$Nuts],['Oils'=>$Oils]);
+        // return view('public.index',['offers'=>$offers],['product'=>$product]);
+        return view('public.index')
+        ->with(['offers'=>$offers])
+        ->with(['Nuts'=>$Nuts])
+        ->with(['Oils'=>$Oils])
+        ->with(['Pasta'=>$Pasta]);
     }
+
     public function product(Request $request,$id){
 
         $product = Product::findOrfail($id); 

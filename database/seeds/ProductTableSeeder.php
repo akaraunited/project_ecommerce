@@ -33,11 +33,44 @@ class ProductTableSeeder extends Seeder
         'price'        => '300$',
         'description'   => 'description',
      ]);
+     Product::create([
+      'user_id' =>  $user->id,
+        'category_id' => Category::findOrFail(1)->id,
+        'featured_image' => '/test/m2.jpg',
+        'name'        => 'Justing 2',
+        'price'        => '300$',
+        'description'   => 'description',
+     ]);
+     Product::create([
+      'user_id' =>  $user->id,
+        'category_id' => Category::findOrFail(1)->id,
+        'featured_image' => '/test/m2.jpg',
+        'name'        => 'Justing 2',
+        'price'        => '300$',
+        'description'   => 'description',
+     ]);
+
 
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(2)->id,
         'featured_image' => '/test/mk4.jpg',
+        'name'        => 'Testing Oils',
+        'price'        => '250$',
+        'description'   => 'description',
+     ]);
+     Product::create([
+      'user_id' =>  $user->id,
+        'category_id' => Category::findOrFail(2)->id,
+        'featured_image' => '/test/mk4.jpg',
+        'name'        => 'Testing Oils',
+        'price'        => '250$',
+        'description'   => 'description',
+     ]);
+     Product::create([
+      'user_id' =>  $user->id,
+        'category_id' => Category::findOrFail(2)->id,
+        'featured_image' => '/test/mk7.jpg',
         'name'        => 'Testing Oils',
         'price'        => '250$',
         'description'   => 'description',
