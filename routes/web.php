@@ -26,6 +26,7 @@ Route::namespace('Frontend')->group(function(){
     Route::get('/icons','ListingController@icons')->name('app.icons');
     Route::get('/typography','ListingController@typography')->name('app.typography');
     Route::get('/contact','ListingController@contact')->name('app.contact');
+    Route::get('/insertdata','ListingController@insertdata')->name('app.insertdata');
 });
 
 Route::prefix('layout')->group(function(){

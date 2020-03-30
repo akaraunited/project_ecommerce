@@ -63,4 +63,7 @@ class ListingController extends Controller
     public function contact(){
         return view('public.contact');
     }
+    public function insertdata(){
+        return view('public.insertdata');
+    }
 }
