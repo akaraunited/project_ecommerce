@@ -29,7 +29,7 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-                <form action="{{route('app.store')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('deshboard.listing.store')}}" method="POST" enctype="multipart/form-data">
                   @csrf
             <div class="pmd-card-body">
                 <h3 style="margin-bottom:20px">Insert Data</h3>

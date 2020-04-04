@@ -70,44 +70,7 @@ class ListingController extends Controller
     public function contact(){
         return view('public.contact');
     }
-    public function insertdata(){
-       
-        $category = Category::select('*')->get();
 
-
-
-        return view('public.insertdata',['category'=>$category]);
-    }
-    public function store(Request $request){
-    //    $data           = $request->only(['name', 'price', 'description','new_image','category_id']);
-    //    dd($data);
-       $request->validate([
-            'name' => 'required',
-            'price' => 'required',
-            'description' => 'required',
-            'category_id' =>  'required|integer|exists:categories,id',
-        ]);
-     
-        $user_id   = Auth::user()->id;
-        $data = $request->all();
-        
-     
-        if($request->file('new_image')){
-            $imageName = $request->file('new_image')->getClientOriginalName();
-
-            request()->new_image->move(public_path('upload'), $imageName);
-
-            $data['image']=$imageName;
-         
-        }
-        $data['user_id'] = $user_id;
-        
-        $product       = Product::create($data);
-        if ($product) {
-
-            return redirect(route('app.index'));
-        }
-        
-   
-    }
+    
+    
 }

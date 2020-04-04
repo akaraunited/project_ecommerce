@@ -26,8 +26,29 @@ Route::namespace('Frontend')->group(function(){
     Route::get('/icons','ListingController@icons')->name('app.icons');
     Route::get('/typography','ListingController@typography')->name('app.typography');
     Route::get('/contact','ListingController@contact')->name('app.contact');
-    Route::get('/insertdata','ListingController@insertdata')->name('app.insertdata');
-    Route::post('/store','ListingController@store')->name('app.store');
+    Route::get('/insertdata','ListingController@insertdata')->middleware('auth')->name('app.insertdata');
+    Route::post('/store','ListingController@store')->middleware('auth')->name('app.store');
+});
+// Route::namespace('Deshboard')->group(function(){
+//   Route::middleware('auth')->group(function(){
+//     Route::frefix('deshboard')->group(function(){
+//       Route::name('deshboard.')->group(function(){
+//         Route::get('/','DeshboardController@index')->name('index');
+//         Route::get('/listing/create','DeshboardController@insert')->name('insert');
+//         Route::post('/insert','DeshboardController@store')->name('store');
+
+//       });
+//     });
+//   });
+// });
+Route::namespace('Deshboard')->group(function(){
+   Route::middleware('auth')->group(function(){
+    Route::name('deshboard.')->group(function(){
+        Route::get('/deshboard','DeshboardController@index')->name('index');
+        Route::get('/deshboard/listing/create','DeshboardController@insert')->name('listing.insert');
+        Route::post('/deshboard/listing','DeshboardController@store')->name('listing.store');
+      });
+  });
 });
 
 Route::prefix('layout')->group(function(){
