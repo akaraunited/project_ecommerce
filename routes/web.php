@@ -45,7 +45,7 @@ Route::namespace('Deshboard')->group(function(){
    Route::middleware('auth')->group(function(){
     Route::name('deshboard.')->group(function(){
         Route::get('/deshboard','DeshboardController@index')->name('index');
-        Route::get('/deshboard/listing/create','DeshboardController@insert')->name('listing.insert');
+        Route::get('/deshboard/listing/insertdata','DeshboardController@insert')->name('listing.insert');
         Route::post('/deshboard/listing','DeshboardController@store')->name('listing.store');
       });
   });
