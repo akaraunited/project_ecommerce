@@ -20,7 +20,7 @@ class ProductTableSeeder extends Seeder
     Product::create([
        'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(1)->id,
-        'featured_image' => '/test/m1.jpg',
+        'image' => '/test/m1.jpg',
         'name'        => 'teasting',
         'price'        => '250$',
         'description'   => 'description',
@@ -28,7 +28,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(1)->id,
-        'featured_image' => '/test/m2.jpg',
+        'image' => '/test/m2.jpg',
         'name'        => 'Justing 2',
         'price'        => '300$',
         'description'   => 'description',
@@ -36,7 +36,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(1)->id,
-        'featured_image' => '/test/m2.jpg',
+        'image' => '/test/m2.jpg',
         'name'        => 'Justing 2',
         'price'        => '300$',
         'description'   => 'description',
@@ -44,7 +44,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(1)->id,
-        'featured_image' => '/test/m2.jpg',
+        'image' => '/test/m2.jpg',
         'name'        => 'Justing 2',
         'price'        => '300$',
         'description'   => 'description',
@@ -54,7 +54,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(2)->id,
-        'featured_image' => '/test/mk4.jpg',
+        'image' => '/test/mk4.jpg',
         'name'        => 'Testing Oils',
         'price'        => '250$',
         'description'   => 'description',
@@ -62,7 +62,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(2)->id,
-        'featured_image' => '/test/mk4.jpg',
+        'image' => '/test/mk4.jpg',
         'name'        => 'Testing Oils',
         'price'        => '250$',
         'description'   => 'description',
@@ -70,7 +70,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(2)->id,
-        'featured_image' => '/test/mk7.jpg',
+        'image' => '/test/mk7.jpg',
         'name'        => 'Testing Oils',
         'price'        => '250$',
         'description'   => 'description',
@@ -80,7 +80,7 @@ class ProductTableSeeder extends Seeder
      Product::create([
       'user_id' =>  $user->id,
         'category_id' => Category::findOrFail(3)->id,
-        'featured_image' => '/test/mk7.jpg',
+        'image' => '/test/mk7.jpg',
         'name'        => 'Testing Pastas',
         'price'        => '250$',
         'description'   => 'description',

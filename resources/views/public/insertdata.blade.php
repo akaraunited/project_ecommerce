@@ -29,33 +29,52 @@
 <body>
     <div class="container">
         <div class="jumbotron">
+                <form action="{{route('app.store')}}" method="POST" enctype="multipart/form-data">
+                  @csrf
             <div class="pmd-card-body">
                 <h3 style="margin-bottom:20px">Insert Data</h3>
                 <!-- Regular Input -->
-                <form action="/action_page.php">
+           
                     <div class="form-group">
                         <label for="regular1" class="control-label">Product Name</label>
-                        <input type="text" id="regular1" class="form-control">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name...">
+                    </div>
+                    <div class="form-group">
+                        <label for="regular1" class="control-label">Price</label>
+                        <input type="text" id="price" name="price" class="form-control" placeholder="Enter your price...">
                     </div>
                     <!-- Textarea -->
                     <div class="form-group">
                         <label class="control-label">Description</label>
-                        <textarea required="" class="form-control"></textarea>
+                        <textarea required="" name="description" class="form-control"></textarea>
                     </div>
+
+                    
             </div>
             <!-- upload image -->
-            <div class="form-group">
-                <label for="selphoto" class="col-sm-2 control-label">Select a File to upload:</label>
-                <div class="col-sm-5">
-                    <input type="file" class="inputstl" id="selphoto" name="sentfile" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1">
-                    <div class="bootstrap-filestyle input-group"><input type="text" class="form-control " placeholder="" disabled=""> <span class="group-span-filestyle input-group-btn" tabindex="0"><label for="selphoto" class="btn btn-primary "><span class="icon-span-filestyle glyphicon glyphicon-upload"></span> <span class="buttonText"> Upload an Image</span></label></span></div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-4">
-                            <button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-8">
+                        <label>Image<i class="fa fa-map-marker"></i></label>
+                        <input name="new_image" type="file" id="new_image" />
+                </div>
+                <div class="col-md-4">
+                    
+                                <label>Category</label>
+                                <select name="category_id" data-placeholder="All Categories" class="chosen-select">
+                                    @foreach ($category as $categories)
+                                    <option value="{{ $categories->id }}">{{ $categories->name}}</option>
+                                    @endforeach
+                                </select>     
+                    
                 </div>
             </div>
+
+                <div class="form-group ">
+                    <div class=" col-sm-4" style="margin-top:5%;float:right;">
+                        <button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+                    </div>
+                </div>
+
             </form>
         </div>
     </div>

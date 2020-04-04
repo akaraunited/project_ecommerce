@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ListingController extends Controller
 {
@@ -13,10 +14,10 @@ class ListingController extends Controller
         
       
         // $product=Product::select('*')->get();
-        $Nuts =Product::select('*')->where('category_id',1)->paginate(3);
-        $Oils =Product::select('*')->where('category_id',2)->paginate(3);
-        $Pasta =Product::select('*')->where('category_id',3)->paginate(3);
-       $offers =Product::select('*')->paginate(8);
+        $Nuts =Product::select('*')->where('category_id',1)->orderBy('created_at', 'desc')->paginate(3);
+        $Oils =Product::select('*')->where('category_id',2)->orderBy('created_at', 'desc')->paginate(3);
+        $Pasta =Product::select('*')->where('category_id',3)->orderBy('created_at', 'desc')->paginate(3);
+       $offers =Product::select('*')->orderBy('created_at', 'desc')->paginate(8);
     //    $Oils =Product::select('*')
     //         ->where('category_id',2)
     //         ->get();
@@ -70,6 +71,43 @@ class ListingController extends Controller
         return view('public.contact');
     }
     public function insertdata(){
-        return view('public.insertdata');
+       
+        $category = Category::select('*')->get();
+
+
+
+        return view('public.insertdata',['category'=>$category]);
+    }
+    public function store(Request $request){
+    //    $data           = $request->only(['name', 'price', 'description','new_image','category_id']);
+    //    dd($data);
+       $request->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'category_id' =>  'required|integer|exists:categories,id',
+        ]);
+     
+        $user_id   = Auth::user()->id;
+        $data = $request->all();
+        
+     
+        if($request->file('new_image')){
+            $imageName = $request->file('new_image')->getClientOriginalName();
+
+            request()->new_image->move(public_path('upload'), $imageName);
+
+            $data['image']=$imageName;
+         
+        }
+        $data['user_id'] = $user_id;
+        
+        $product       = Product::create($data);
+        if ($product) {
+
+            return redirect(route('app.index'));
+        }
+        
+   
     }
 }

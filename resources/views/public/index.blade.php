@@ -256,7 +256,7 @@
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-								<img src="{{$Nut->featured_image}}" alt="">
+								<img src="{{$Nut->image}}" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 										<a href="{{route('app.product',['id'=>$Nut['id']])}}" class="link-product-add-cart">Quick View</a>
@@ -324,7 +324,7 @@
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="{{$Oil->featured_image}}" alt="">
+									<img src="{{$Oil->image}}" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="{{route('app.product',['id'=>$Oil['id']])}}" class="link-product-add-cart">Quick View</a>
@@ -337,7 +337,7 @@
 									<a href="single.html">{{$Oil->name}}</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$78.00</span>
+										<span class="item_price">{{$Oil->price}}</span>
 										<del>$110.00</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
@@ -375,7 +375,7 @@
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="{{$Pastas->featured_image}}" alt="">
+									<img src="{{$Pastas->image}}" alt="">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="{{route('app.product',['id'=>$Pastas['id']])}}" class="link-product-add-cart">Quick View</a>
@@ -387,7 +387,7 @@
 									<a href="single.html">{{$Pastas->name}}</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">sdfkjdksjf</span>
+										<span class="item_price">{{$Pastas->price}}</span>
 										<del>$25.00</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
@@ -444,7 +444,7 @@
 						<div class="w3l-specilamk">
 							<div class="speioffer-agile">
 								<a href="single.html">
-									<img src="{{$offer->featured_image}}" alt="">
+									<img src="{{$offer->image}}" alt="">
 								</a>
 							</div>
 							<div class="product-name-w3l">
